@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "preLaunchTask",
+            "type": "shell",
+            "command": "python",
+            "args": ["pre_launch_task.py"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+}

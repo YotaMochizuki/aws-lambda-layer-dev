@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "invoke lambda (python3.13)",
+            //"preLaunchTask": "pre_launch_task", // 実行前に行うタスクの名前
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/template.yaml",
+                "logicalId": "LambdaApp" // ← template.yaml のリソース名と一致させる必要あり
+            },
+            "lambda": {
+                "payload": {
+                    "path": "${workspaceFolder}/event.json"
+                },
+                "environmentVariables": {}
+            },
+            //"sam": {
+            //"dockerNetwork":"${workspaceFolderBasename}_network"
+            //}
+        },
+    ]
+}
