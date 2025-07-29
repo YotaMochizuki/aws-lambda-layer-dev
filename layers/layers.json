@@ -1,0 +1,18 @@
+[
+    {
+        "name": "layer_a",
+        "arn": "arn:aws:lambda:ap-northeast-1:577104691349:layer:layerA:1",
+        "enabled": true
+    },
+    {
+        "name": "layer_b",
+        "arn": "arn:aws:lambda:ap-northeast-1:577104691349:layer:layerB:1",
+        "enabled": true,
+        "note": "Not needed in local dev"
+    },
+    {
+        "name": "layer_c",
+        "arn": "arn:aws:lambda:ap-northeast-1:577104691349:layer:layerC:1",
+        "enabled": true
+    }
+]

@@ -2,14 +2,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "preLaunchTask",
+            "label": "download_layers",
             "type": "shell",
-            "command": "python",
-            "args": ["pre_launch_task.py"],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "command": "${workspaceFolder}/.venv/bin/python",
+            "args": [
+                "${workspaceFolder}/layers/download_layers.py"
+            ],
+            "options": {
+                "env": {
+                    "LAYERS_DIR": "${workspaceFolder}/layers",
+                    "LAYERS_JSON": "${workspaceFolder}/layers/layers.json",
+                    "TMP_ZIP": "${workspaceFolder}/layers/tmp/layer_download.zip"
+                }
+            },
+            "problemMatcher": "$python"
         }
-    ],
+    ]
 }
